@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+    
+<%@ page import="post.PostDAO" %>
+<%@ page import="post.PostDTO" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	request.setCharacterEncoding("UTF-8");
+
+	String title = null;
+	if(session.getAttribute("title") != null) {
+		title = (String) session.getAttribute("title");
+	}
+	
+	String content = null;
+	if(session.getAttribute("content") != null) {
+		content = (String) session.getAttribute("content");
+	}
+	
+	PostDAO postDAO = new PostDAO();
+	int result = postDAO.post(new PostDTO(title, content));
+%>
+</body>
+</html>

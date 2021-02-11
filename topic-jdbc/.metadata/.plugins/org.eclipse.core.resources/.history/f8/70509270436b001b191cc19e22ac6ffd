@@ -1,0 +1,16 @@
+package jsp;
+
+import java.sql.Connection;
+
+public class DatabaseUtil {
+
+
+	public static Connection getConnection() {
+		try {
+			String dbURL = "jdbc:mysql://localhost:3306/lectureevaluation?serverTimezone=UTC";
+			String dbID = "root";
+			String dbPassword = "root";
+			class.forName("com.mysql.cj.jdbc.Driver");
+		}
+	}
+}

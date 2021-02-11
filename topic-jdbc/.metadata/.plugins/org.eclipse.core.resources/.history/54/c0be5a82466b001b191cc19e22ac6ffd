@@ -1,0 +1,8 @@
+package post;
+
+public class PostDAO {
+
+	public int post(PostDTO)
+	
+	
+}
